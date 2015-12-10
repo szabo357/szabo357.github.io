@@ -263,29 +263,32 @@
 					<span class="">
 						<i class="fa fa-magic fa-border fa-2x orange"></i>
 						<h2>Raffle Engine</h2>
-						
+
 					</span>
 
 				</div>
 				<div class="row">
 					
-					<div class="row">
+					
 						<div  v-show="RaffleDone" class="winner-wrapper">
 						  <i class="fa fa-magic fa-money  green" ></i>
 						  {{ buyer }} 
 						</div>
 
 						<div v-show="!RaffleDone" class="beforeWinner-wrapper">
-							<span>The name of the person that has the turn to buy will be shown here! </span>
-							<i class="fa fa-info fa-3x" ></i>				
+							<i class="fa fa-info fa-3x" ></i>	
+							<span>The name of the person that has the turn to buy will be shown here! </span>			
 						</div>
 					
-					</div>
-					<div class="row">
+					
+					<div class="well">
+							<strong>Instructions: </strong> Next buyer name is going 
+						</div>
+					<!-- <div class="row">
 						<div class="well">
 							<strong>Instructions: </strong> Next buyer name is going 
 						</div>
-					</div>
+					</div> -->
 				</div>	
 			</div>	
 		</div>
