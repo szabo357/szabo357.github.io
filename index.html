@@ -19,9 +19,10 @@
 	<style type="text/css" media="screen">
 		body{
 			padding-top: 40px;
-			background:#f5f5f5;
+			background:#FAFAFA;
 			color:#212121;
 			transition:padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
 		}
 		h2{
 			display:inline-block;
@@ -33,6 +34,10 @@
 			height:560px;
 			/*background: #f5f5f5;*/
 			border: 1px solid #b7b7b7;
+			background-color: #EFEFEF;
+
+			box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    		z-index:-1;
 		}
 		.sidenav{
 			padding-top: 10px;
@@ -40,10 +45,13 @@
 			padding-bottom: 10px;
 			height:560px;
 			/*overflow: auto;*/
-			/*background: #f5f5f5;*/
+			background-color: #efefef;
 			border-top: 1px solid #b7b7b7;
 			border-bottom: 1px solid #b7b7b7;
 			border-left: 1px solid #b7b7b7;
+
+			box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    		z-index:1;
 		}
 		.list-group{
 			height:340px;
@@ -59,14 +67,15 @@
 		.red{
 			color:red;
 		}
-		.orange{
-			color:yellow;
-		}
+
+
 		ul{background-color:#fff;}
 		li:hover
 		{
     		background-color:#f3f3f3;
 		}
+
+
 		.playing {   font-size:19px;}
 		.nplaying { text-decoration: line-through; background:#ECEFF1; font-size:19px;}
 		.winner-wrapper{
@@ -74,27 +83,99 @@
 			display: block;
 			
 			background-color: #4CAF50;
+			margin-top:100px;
 			margin-left: 40px;
 			margin-right: 40px;
 			
-			padding:40px;
-			padding-top:95px; 
+			
+			padding-top:75px; 
+			padding-left:25px;
+			padding-right: 60px;
 			padding-bottom:95px;
 
 			text-align: center;
-			font-weight: bold ; 
-			font-size: 60px;
+			font-weight: lighter ; 
+			font-size: 30px;
 			color:#FFFFFF;			
 
 			border-width: 10px;			
 			border-radius: 20px 20px 20px 20px;
-			-moz-border-radius: 20px 20px 20px 20px;*/
+			-moz-border-radius: 20px 20px 20px 20px;
 			-webkit-border-radius: 20px 20px 20px 20px;
 			border: 5px solid #388E3C;
 			
 			transition: box-shadow .25s;
   			box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
 		}
+		.beforeWinner-wrapper{
+			height:250px;
+			display: block;
+			
+			background-color: #3F51B5;
+			margin-top:100px;
+			margin-left: 40px;
+			margin-right: 40px;
+			
+			
+			padding-top:75px; 
+			padding-left:25px;
+			padding-right: 60px;
+			padding-bottom:95px;
+
+			text-align: center;
+			font-weight: initial ; 
+			font-size: 30px;
+			color:#FFFFFF;			
+
+			border-width: 10px;			
+			border-radius: 20px 20px 20px 20px;
+			-moz-border-radius: 20px 20px 20px 20px;
+			-webkit-border-radius: 20px 20px 20px 20px;
+			border: 5px solid #303F9F;
+			
+			transition: box-shadow .25s;
+  			box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+		}
+	
+	/* Fonts Styles */
+	
+		.page-title-wrapper{
+			/*margin-top:10px;*/
+			padding-top:10px;
+			padding-bottom: 10px;
+			padding-left:35px;
+			font-size: 60px;
+			color:#FFFFFF;
+			font-weight:bolder;
+			text-align: inherit;
+
+			background-color:#3F51B5;
+			/*border-color: #1976D2;	*/
+    		box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    		z-index:1;
+			border-bottom: 1px solid #b7b7b7;
+		}
+		.page-title-text
+		.page-title-icon{
+			margin-right: 25px;
+		}	
+		.beforeWinner-wrapper-icon{
+			
+			margin-right:10px;
+			padding-top:45px;
+		}
+		.winner-wrapper-text{
+			font-weight: bold ; 
+			font-size: 55px;
+			color:#FFFFFF;
+		}
+		.beforeWinner-wrapper-text{
+			
+			font-weight: initial ; 
+			font-size: 35px;
+			color:#FFFFFF;	
+		}
+
 		.wrapper-purple{
 			background-color:#9C27B0;
 			border-color: #7B1FA2;	
@@ -115,6 +196,10 @@
 			background-color:#03A9F4;
 			border-color: #0288D1;	
 		}
+		.wrapper-cyan{
+			background-color:#00BCD4;
+			border-color:#0097A7;
+		}
 		.wrapper-green{
 			background-color:#4CAF50;
 			border-color: #388E3C;	
@@ -133,33 +218,7 @@
 			border-color: #FFA000;	
 		}
 
-		.beforeWinner-wrapper{
-			height:250px;
-			display: block;
-			
-			background-color: #3F51B5;
-			margin-top:40px;
-			margin-left: 40px;
-			margin-right: 40px;
-			
-			
-			padding-top:40px; 
-			padding-bottom:95px;
 
-			text-align: center;
-			font-weight: bold ; 
-			font-size: 20px;
-			color:#FFFFFF;			
-
-			border-width: 10px;			
-			border-radius: 20px 20px 20px 20px;
-			-moz-border-radius: 20px 20px 20px 20px;*/
-			-webkit-border-radius: 20px 20px 20px 20px;
-			border: 5px solid #303F9F;
-			
-			transition: box-shadow .25s;
-  			box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
-		}
 
 		::-webkit-scrollbar {
 			width: 10px;
@@ -217,7 +276,7 @@
 		<form action="">
 
 			<div class="form-group">
-				<div class="search-box" v-bind:class="[sboxhover ? classD : classE]">
+				<div class="search-box sbox-border" >
 					<i class="fa fa-search" style="margin-top:10px"></i>	
 					<input v-model="query" placeholder="Search Member" class="search-input" 
 						@mouseenter="sboxhover = true" @mouseout="sboxhover = false; classD='sbox-border'" @focus="classD='sbox-border2' " @focusout="classD='sbox-border' " 
@@ -252,43 +311,56 @@
 				<button   class="btn btn-default  form-control" @click.prevent="doRaffle">Raffle</button>
 			</div>
 			<div class="form-group">
-				<button  class="btn btn-default  form-control" @click.prevent="resetPlaying">reset</button>
+				<button  class="btn btn-default  form-control" @click.prevent="resetPlaying">Reset</button>
 			</div>
 		</form>
 
 				
 			</div>
 			<div  id="app2" class=" main-content col-xs-9 col-sm-9 col-md-9 col-lg-9">
-				<div class="row container">
-					<span class="">
-						<i class="fa fa-magic fa-border fa-2x orange"></i>
-						<h2>Raffle Engine</h2>
+				<div class="row">
 
-					</span>
 
-				</div>
+					<div class="page-title-wrapper ">
+					  <i class="fa fa-magic"></i>  Raffle Engine
+					</div>
+				</div>				
 				<div class="row">
 					
-					
-						<div  v-show="RaffleDone" class="winner-wrapper">
-						  <i class="fa fa-magic fa-money  green" ></i>
-						  {{ buyer }} 
+						<div  v-show="RaffleDone" class="winner-wrapper wrapper-light-blue">
+						  
+							<div class="row">
+<!-- 								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+									<i class="fa fa-magic fa-money fa-3x " ></i>
+								</div> -->
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<span class="winner-wrapper-text"> 
+										 {{ buyer }} 
+									</span>
+								</div>
+							</div>
+
+						  <!-- <i class="fa fa-magic fa-money  green" ></i> -->
+						 
+
+
 						</div>
 
-						<div v-show="!RaffleDone" class="beforeWinner-wrapper">
-							<i class="fa fa-info fa-3x" ></i>	
-							<span>The name of the person that has the turn to buy will be shown here! </span>			
+						<div v-show="!RaffleDone" class="beforeWinner-wrapper wrapper-cyan">
+							
+							<div class="row">
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+									<i class="fa fa-info-circle fa-3x" ></i>
+								</div>
+								<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+									<span class="beforeWinner-wrapper-text"> The name of the person that has the turn to buy will be shown here!</span>
+								</div>
+							</div>
+							<!-- <span class="beforeWinner-wrapper-icon"> <i class="fa fa-info-circle fa-3x" ></i></span>	
+							<span>The name of the person that has the turn to buy will be shown here! </span>
+							 -->			
 						</div>
 					
-					
-					<div class="well">
-							<strong>Instructions: </strong> Next buyer name is going 
-						</div>
-					<!-- <div class="row">
-						<div class="well">
-							<strong>Instructions: </strong> Next buyer name is going 
-						</div>
-					</div> -->
 				</div>	
 			</div>	
 		</div>
@@ -414,21 +486,7 @@
          	greet:function(message){
          		console.log(message);
          	},
-         	// WrapperColor:function(index){
-         	// 	switch(index){
-         	// 		case 1:  this.classF = return 'wrapper-purple';
-         	// 		case 2:  this.classF = return 'wrapper-purple'
-         	// 		case 3:  this.classF = return 'wrapper-purple'
-         	// 		case 4:  this.classF = return 'wrapper-purple'
-         	// 		case 5:  this.classF = return 'wrapper-purple'
-         	// 		case 6:  this.classF = return 'wrapper-purple'
-         	// 		case 7:  this.classF = return 'wrapper-purple'
-         	// 		case 8:  this.classF = return 'wrapper-purple'
-         	// 		case 9:  this.classF = return 'wrapper-purple'
-         	// 		case 10: this.classF = return 'wrapper-purple'
-         	// 		default: this.classF = return 'wrapper-amber'
-         	// 	}
-         	// }
+
          },
 
          computed: {
@@ -456,36 +514,6 @@
 
 		});
 
-
-
-  
 		</script>		
 	</body>
 </html>
-
-<!--   Vue Show exercise
-
-
-	@@@@@@@@@@ HTML @@@@@@@@@@@@
-			<form >
-				<span class="error" v-show="!message"> 
-				 you must enter a messega
-				</span>
-
-				<textarea v-model="message"></textarea>
-				<button type="submit" v-show="message">
-					Send Message
-				</button>
-			</form>
-			<pre>
-					{{ $data | json }}
-				</pre>
-
-	@@@@@@@@@@ JS  @@@@@@@@@@@@@
-			new Vue({
-			el:'#app2',
-			data:{
-				message:""
-			}
-		})
- -->
